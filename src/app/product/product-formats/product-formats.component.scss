@@ -1,0 +1,20 @@
+.product-formats {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+
+    li {
+        flex-grow: 1;
+        width: 25%;
+
+        img {
+            max-width: 100px;
+        }
+    }
+}
+
+.headline {
+    font-size: 1.2em;
+    font-weight: bold;
+}

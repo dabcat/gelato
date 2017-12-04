@@ -1,0 +1,22 @@
+@import '~styles.scss';
+
+.template-links {
+    a {
+        color: $blue;
+        border: 1px solid $blue;
+        border-radius: 3px;
+        padding: 5px 10px;
+    }
+
+    li {
+        margin: 5px 10px 0;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.product-types {
+    list-style: none;
+    display: flex;
+    margin: 20px 0;
+
+    li {
+        margin: 0 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+.headline {
+    font-size: 1.2em;
+    font-weight: bold;
+}

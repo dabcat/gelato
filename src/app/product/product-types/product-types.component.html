@@ -1,0 +1,6 @@
+<span class="headline">Product Type</span>
+<ul class="product-types">
+  <li *ngFor="let item of productTypes$">
+    <a (click)="onSelect(item)">{{item.content}}</a>
+  </li>
+</ul>
