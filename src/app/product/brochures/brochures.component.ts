@@ -19,6 +19,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 export class BrochuresComponent implements OnInit {
 
   formats$: Observable<IFormats>;
+  filters$: BehaviorSubject<any> = new BehaviorSubject(null);
   productTemplateLinks$: Observable<Array<IProductTemplates>>;
   productTypes$: Observable<Array<IProductTypes>>;
 
@@ -32,14 +33,7 @@ export class BrochuresComponent implements OnInit {
     this.formats$ = this.data.getFormats();
   }
 
-  onSelect(event) {
-    //mocking data
-    console.log(event);
-    this.formats$ = this.data.getFormats();
-    if(event.id === 1) {
-      this.formats$ = this.formats$.filter(item => item.folded !== null)
-    } else {
-      this.formats$ = this.formats$.filter(item => item.folded === null)
-    }
+  onSelect(event: IProductTypes) {
+    this.filters$.next(event.content);
   }
 }

@@ -1,6 +1,6 @@
 <span class="headline">Choose the final size of your finished brochure</span>
 <ul class="product-formats">
-  <li *ngFor="let format of productFormats$">
+  <li *ngFor="let format of filteredProducts | async">
     <img src="assets/formats/{{format.name}}.png" alt="" />
   </li>
 </ul>

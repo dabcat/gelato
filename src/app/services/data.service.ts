@@ -4,6 +4,7 @@ import { ApiService } from '@app/services/api.service';
 import { Observable } from 'rxjs/Observable';
 import { IProductTemplates } from '@app/models/IProductTemplates';
 import { IProductTypes } from '@app/models/IProductTypes';
+import { IFormats } from '@app/models/IFormats';
 
 @Injectable()
 export class DataService {
@@ -36,7 +37,7 @@ export class DataService {
 
   constructor(private api: ApiService) { }
 
-  getFormats(): Observable<any> {
+  getFormats(): Observable<IFormats> {
     return this.api.apiGetFormats();
   }
 
